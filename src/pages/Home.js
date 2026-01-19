@@ -65,7 +65,7 @@ const Home = ({ user }) => {
         <main>
           <div className={styles.hlgallery}>
             {highlights.map(id => <HighlightCard user={user} key={id} {...events[id]} />)}
-            <div className={styles.card}>
+            <div className={cx(styles.card, styles.scheduleCard)}>
               <div className={styles.scheduleBg}></div>
               <figure></figure>
               <main>

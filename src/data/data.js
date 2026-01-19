@@ -108,7 +108,7 @@ export const mainCoordinators = [
   },
 ]
 
-export const highlights = ['sport1', 'sport3', 'sport_sprint', 'sport_khokho', 'sport_badminton', 'sport2'];
+export const highlights = ['sport1', 'sport3', 'sport_sprint', 'sport_khokho', 'sport_badminton', 'volleyball'];
 
 export const events = {
   'sport1': {
@@ -212,13 +212,13 @@ export const events = {
   'volleyball': {
     id: 'volleyball',
     title: 'VolleyBall',
-    figureSrc: '',
+    figureSrc: '/media/events/volleyball.jpg',
     day: 1,
     time: 'TBD',
     venue: 'Court',
     desc: 'Volleyball competition.',
     type: 'Sport',
-    highlight: false,
+    highlight: true,
     isRegistrationOpen: true,
     googleFormUrl: 'https://forms.google.com',
     googleFormUrlMale: 'https://forms.google.com',
