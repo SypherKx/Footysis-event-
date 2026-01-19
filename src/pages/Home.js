@@ -13,8 +13,8 @@ import Hero from '../components/Hero';
 import { motion } from 'framer-motion'
 
 const tags = [
-  'cosplay', 'fun', 'poetry', 'face painting', 'solo song', 'dance', 'essay', 'sketching',
-  'concert', 'flash mob', 'film making', 'joy', 'concert', 'dj', 'poetry slam'
+  'basketball', 'football', 'kabaddi', 'volleyball', 'badminton', 'chess', 'carrom',
+  'kho-kho', 'sprints', 'throws', 'jumps', 'tug of war', 'table tennis', 'athletics', 'sports'
 ]
 
 const Home = ({ user }) => {
