@@ -1,3 +1,3 @@
-# Atulyam 2023
+# FOOTPRINTS 2K26
 
-[Website for Atulyam 2023](https://atulyam23.netlify.app) - A cultural fest of NITAP.
+Website for FOOTPRINTS 2K26 - Sports fest of PSIT Kanpur.
