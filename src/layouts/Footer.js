@@ -51,7 +51,7 @@ const Footer = () => {
           <span>&copy; 2K26 FOOTPRINTS PSIT KANPUR</span>
           {devTeam && (
             <ul className={styles.devteam}>
-              <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/SypherKx">@KaraPratap Singh</a></li>
+              <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/SypherKx">@Karan Pratap Singh</a></li>
             </ul>
           )}
         </div>
