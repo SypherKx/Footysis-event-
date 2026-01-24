@@ -63,7 +63,7 @@ const Gallery = ({ user }) => {
           <span>Gallery</span>
         </h1>
         <div className={cx('subtitle', styles['header-subtitle'])}>
-          <h2>Feb.23-25</h2>
+          <h2>Feb. 23-25</h2>
           <div>FOOTPRINTS'26 in reels</div>
         </div>
       </header>

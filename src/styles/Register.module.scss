@@ -1,0 +1,139 @@
+.register {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+
+    .page-header {
+        // Inherits display: flex; flex-direction: column; justify-content: flex-end; from index.scss
+        // We ensure z-index is higher than background
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: 699px) {
+            height: 100vh; // Ensure full height on mobile like Gallery
+        }
+    }
+
+    .header-subtitle {
+        color: var(--primary);
+        font-family: 'Antonio', sans-serif;
+        letter-spacing: -0.15ch;
+        line-height: 1;
+        text-transform: uppercase;
+
+        >h2 {
+            font-size: 8.5vw;
+        }
+
+        >div {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 999px) {
+            >h2 {
+                font-size: 12vw;
+            }
+        }
+
+        @media screen and (max-width: 699px) {
+            >h2 {
+                font-size: 16vw;
+            }
+        }
+    }
+
+    .main-content {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Keep content centered
+        text-align: center;
+    }
+
+    // Styles for the "Opening Soon" section
+    .coming-soon {
+        margin-top: 2rem;
+
+        .big-text {
+            font-family: 'Antonio', sans-serif;
+            font-size: 6rem;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+
+        .info-text {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    }
+
+    .divider {
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(90deg, #ffd700, #00d4ff, #ff6b6b);
+        margin: 2rem auto;
+        border-radius: 2px;
+    }
+
+    // Background Animation
+    .intro-bg {
+        user-select: none;
+        pointer-events: none;
+        overflow-y: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; // Covers the whole page
+        --heading-font-size: 11vw;
+        font-size: calc(1.4 * var(--heading-font-size));
+        white-space: nowrap;
+        font-family: 'Antonio', sans-serif;
+        letter-spacing: -0.18ch;
+        text-transform: uppercase;
+        z-index: 0; // Behind content
+
+        .rail {
+            position: absolute;
+            height: calc(1.4 * var(--heading-font-size));
+            line-height: 0.8;
+            opacity: 0.15; // Subtle opacity to avoid overlap issues
+        }
+
+        .rail:nth-child(1) {
+            color: #dadada;
+            top: 20%;
+            animation: 140s infinite linear marquee;
+        }
+
+        .rail:nth-child(2) {
+            color: #dadada;
+            top: 60%;
+            animation: 120s infinite linear marquee;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: 999px) {
+            --heading-font-size: 20vw;
+        }
+    }
+}

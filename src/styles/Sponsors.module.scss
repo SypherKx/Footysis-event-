@@ -6,6 +6,7 @@
     align-items: center;
     text-align: center;
     padding: 4rem 2rem;
+    position: relative; // Ensure absolute position children are relative to this container
 
     .page-header {
         display: flex;
@@ -14,13 +15,49 @@
         height: auto !important;
         padding: 0 !important;
         margin-bottom: 1rem;
+        z-index: 2; // Keep content above background
     }
 
-    // Center the heading
+    // Removed min-height: 100vh and flex centering to allow header to take full screen naturally as per Gallery
+
+
+
+    // Keep heading centering or allow it to align left if desired. The Gallery reference has it bottom-left.
+    // If the user wants EXACT placement like Gallery, we should remove the center override.
     :global(.heading) {
         text-align: center;
+        // Removed text-align: center and margin overrides
+        color: var(--primary);
         transform: none !important;
         margin: 0 !important;
+    }
+
+    .header-subtitle {
+        color: var(--primary);
+        font-family: 'Antonio', sans-serif;
+        letter-spacing: -0.15ch;
+        line-height: 1;
+        text-transform: uppercase;
+
+        >h2 {
+            font-size: 8.5vw;
+        }
+
+        >div {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 999px) {
+            >h2 {
+                font-size: 12vw;
+            }
+        }
+
+        @media screen and (max-width: 699px) {
+            >h2 {
+                font-size: 16vw;
+            }
+        }
     }
 
     .main-content {
@@ -28,6 +65,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 4rem 2rem;
     }
 
     .divider {
@@ -86,6 +124,56 @@
 
         @media screen and (max-width: 699px) {
             font-size: 1rem;
+        }
+    }
+
+    .intro-bg {
+        user-select: none;
+        pointer-events: none;
+        overflow-y: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        --heading-font-size: 11vw;
+        font-size: calc(1.4 * var(--heading-font-size));
+        white-space: nowrap;
+        font-family: 'Antonio', sans-serif;
+        letter-spacing: -0.18ch;
+        text-transform: uppercase;
+        z-index: 0;
+
+        .rail {
+            position: absolute;
+            height: calc(1.4 * var(--heading-font-size));
+            line-height: 0.8;
+        }
+
+        .rail:nth-child(1) {
+            color: #dadada;
+            top: 20%;
+            animation: 140s infinite linear marquee;
+        }
+
+        .rail:nth-child(2) {
+            color: #dadada;
+            top: 60%;
+            animation: 120s infinite linear marquee;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: 999px) {
+            --heading-font-size: 20vw;
         }
     }
 }

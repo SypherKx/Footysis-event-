@@ -73,14 +73,14 @@ const Events = ({ user }) => {
           </NavLink>
         </div>
         <div className={cx('subtitle', styles['header-subtitle'])}>
-          <h2>Feb.23-25</h2>
+          <h2>Feb. 23-25</h2>
           <div>2K26</div>
         </div>
       </header>
       <main className={cx(styles['main-content'])}>
         <nav className={styles['schedule-nav']}>
           <ul className={styles.tabs}>
-            {['Thu.', 'Fri.', 'Sat.'].map((day, i) => (
+            {['Mon.', 'Tue.', 'Wed.'].map((day, i) => (
               <ScheduleNavBtn key={day}
                 currentDay={currentDay} day={i}
                 label={day} handleDayChange={setCurrentDay} />
