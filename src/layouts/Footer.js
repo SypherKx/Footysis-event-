@@ -25,6 +25,7 @@ const Footer = () => {
               <li><NavLink to="/events">Events</NavLink></li>
               <li><NavLink to="/gallery">Gallery</NavLink></li>
               <li><NavLink to="/register">Register</NavLink></li>
+              <li><a href="https://chat.whatsapp.com/JsCM0ujhOAdAo4IxaV8EgO" target="_blank" rel="noreferrer">Whatsapp</a></li>
             </ul>
           </div>
           <div className={styles.linkColumn}>
