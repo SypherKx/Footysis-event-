@@ -44,7 +44,7 @@ const Footer = () => {
             <button className={cx(styles.devteamBtn, {
               [styles.on]: devTeam
             })} onClick={(e) => { e.preventDefault(); setDevTeam(!devTeam) }}>
-              SypherKx
+              Team United
             </button>
           </span>
           <span className={styles.sep}>~</span>
