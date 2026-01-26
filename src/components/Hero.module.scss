@@ -109,17 +109,17 @@
         .psit-logo {
             position: absolute;
             bottom: 100%;
-            left: 50%;
-            transform: translate(-50%, 10%);
-            width: 12%; // Proportional to main logo
+            left: 4%; // Aligned to the 'F' of Footprints
+            transform: translateY(10%); // Removed center alignment
+            width: 9.6%; // 20% smaller than 12%
             height: auto;
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
             margin-bottom: 20px;
             z-index: 10;
 
             @media screen and (max-width: 768px) {
-                width: 20%; // Larger on mobile
-                transform: translate(-50%, 10%);
+                width: 16%; // 20% smaller than 20%
+                transform: translateY(10%);
             }
         }
 
@@ -132,17 +132,17 @@
 
         .logo-2k26 {
             position: absolute;
-            top: 95%; // Moved down to avoid overlap
-            right: 0; // Strictly right-aligned
-            width: 22%; // Increased size
+            top: 105%; // Moved down further
+            right: 5%; // Shifted slightly left
+            width: 31.2%; // Increased size by another 20%
             height: auto;
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
             // transform: rotate(-10deg);
 
             @media screen and (max-width: 768px) {
-                width: 30%;
-                right: 0;
-                top: 100%;
+                width: 43.2%; // Increased size by another 20%
+                right: 5%; // Shifted slightly left
+                top: 110%; // Moved down a bit more for mobile
             }
         }
     }

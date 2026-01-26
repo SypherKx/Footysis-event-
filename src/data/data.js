@@ -1,8 +1,7 @@
 export const eventStartDate = 'Feb 16, 2026 10:00:00';
 
 export const coordinators = [
-  { name: 'Suryansh Shukla', roll: '', phone: '', email: '' },
-  { name: 'Divyansh Verma', roll: '', phone: '', email: '' },
+
   { name: 'Neelanshu Mishra', roll: '', phone: '', email: '' },
   { name: 'Apoorva Pandey', roll: '', phone: '', email: '' },
   { name: 'Karan Pratap Singh', roll: '', phone: '', email: '' },
@@ -27,6 +26,7 @@ export const coordinators = [
   { name: 'Swarnima Patel', roll: '', phone: '', email: '' },
   { name: 'Aryaveer Vikram Singh', roll: '', phone: '', email: '' },
   { name: 'Mujahidul Islam', roll: '', phone: '', email: '' },
+  { name: 'Ashutosh Trivedi', roll: '', phone: '', email: '' },
 ]
 
 export const mainCoordinators = [

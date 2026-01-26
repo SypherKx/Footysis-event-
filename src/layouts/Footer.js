@@ -52,8 +52,8 @@ const Footer = () => {
           {devTeam && (
             <ul className={styles.devteam}>
               <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/SypherKx">@Karan Pratap Singh</a></li>
-              <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/samarthbhatt">@Samarth Bhatt</a></li>
-              <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/DivyanshVijay">@Divyansh Vijay</a></li>
+              <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/Samaruta-batto">@Samarth Bhatt</a></li>
+              <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/divyansh-vijay">@Divyansh Vijay</a></li>
               <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/SuryanshSharan">@Suryansh Sharan</a></li>
               <li><a className={cx('link', styles.ln)} target='_blank' rel='noreferrer' href="https://github.com/ArpitBajpai">@Arpit Bajpai</a></li>
             </ul>
