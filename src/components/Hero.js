@@ -49,7 +49,7 @@ const Hero = () => {
   return (
     <div className={styles.hero} id="hero">
       <div className={styles.grain}></div>
-      <video className={styles['hero-bg']} autoPlay={true} muted={true} loop={true}>
+      <video className={styles['hero-bg']} autoPlay={true} muted={true} loop={true} playsInline={true} preload="auto" poster={Logo2K26}>
         <source src={HeroVideo} />
       </video>
       <div className={styles.content}>

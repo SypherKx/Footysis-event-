@@ -1,6 +1,6 @@
 .carousel {
     position: relative;
-    cursor: none;
+    // cursor: none; // Restored default cursor
     --card-width: 20%;
 
     .c-cards-wrapper {
@@ -14,10 +14,10 @@
             padding-left: 0.3125rem;
             padding-right: 0.3125rem;
             width: var(--card-width);
-            height: auto;
             flex-shrink: 0;
             position: relative;
             transition-property: transform;
+            margin-bottom: 3rem; // Added spacing between stacked cards
 
             .card {
                 display: block;
@@ -40,7 +40,6 @@
                         object-fit: cover;
                         object-position: center 25%;
                         opacity: .8;
-                        filter: grayscale(100%);
                         z-index: 10;
                         transition: opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
                     }
@@ -68,13 +67,13 @@
                 }
 
                 .card-content {
-                    margin-top: 1.25rem;
+                    margin-top: 0.5rem; // Reduced from 1.25rem to bring text closer to image
 
                     .card-heading {
                         font-size: 1.3125rem;
                         font-weight: 700;
                         line-height: 1.04;
-                        margin-bottom: .625rem;
+                        margin-bottom: 0.2rem; // Reduced from .625rem
                         color: var(--primary);
                     }
 
@@ -135,13 +134,14 @@
     }
 
     @media screen and (max-width: 699px) {
-        --card-width: 60%;
+        --card-width: 48%;
 
         .c-cards-wrapper .card-wrapper .card .card-content {
-            margin-top: 1rem;
+            margin-top: 0.25rem; // Reduced for mobile
 
-            .caard-heading {
-                margin-bottom: 0.3125rem;
+            .card-heading {
+                // Fixed typo from 'caard-heading'
+                margin-bottom: 0.1rem;
             }
         }
     }
@@ -181,6 +181,7 @@
 
     // Mouse cursor
     .c-gallery-cursor {
+        display: none; // Hidden as requested
         position: absolute;
         top: 0;
         left: 0;

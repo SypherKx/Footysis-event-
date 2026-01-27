@@ -109,16 +109,16 @@
         .psit-logo {
             position: absolute;
             bottom: 100%;
-            left: 4%; // Aligned to the 'F' of Footprints
+            left: 2.5%; // Shifted slightly right from 1%
             transform: translateY(10%); // Removed center alignment
-            width: 9.6%; // 20% smaller than 12%
+            width: 7.7%; // Reduced by another 10%
             height: auto;
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
             margin-bottom: 20px;
             z-index: 10;
 
             @media screen and (max-width: 768px) {
-                width: 16%; // 20% smaller than 20%
+                width: 13%; // Reduced by another 10%
                 transform: translateY(10%);
             }
         }

@@ -7,8 +7,8 @@ const links = [
   { link: '/', name: 'Home', onlyMobile: true },
   { link: '/events', name: 'Schedule' },
   { link: '/gallery', name: 'Gallery' },
-  { link: '/register', name: 'Register' },
-  { link: '/sponsors', name: 'Sponsors' },
+  { link: '/register', name: 'Events' },
+  // { link: '/sponsors', name: 'Sponsors' },
   // Profile link only shown when auth is enabled
   ...(ENABLE_AUTH ? [{ link: '/user', name: 'Profile', auth: true }] : []),
 ]

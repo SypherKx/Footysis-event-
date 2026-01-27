@@ -1,40 +1,85 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import styles from '../styles/Sponsors.module.scss';
-import cx from 'classnames';
-import SupportLink from '../components/SupportLink';
+import styles from '../styles/Register.module.scss';
+import Footer from '../layouts/Footer';
+
+import imgBadminton from '../media/events/badminton_new3.png';
+import imgKhoKho from '../media/events/kho-kho_new2.png';
+import imgBasketball from '../media/events/basketball_new.png';
+import imgSlowCycle from '../media/events/slow-cycle_new.png';
+import imgThrow from '../media/events/throw_new.png';
+import imgChess from '../media/events/chess_new.png';
+import imgKabaddi from '../media/events/kabaddi_new.png';
+import imgSprint from '../media/events/sprint_new.png';
+import imgTableTennis from '../media/events/table-tennis_new.png';
+import imgCarrom from '../media/events/carrom_new2.png';
+import imgFootball from '../media/events/football_new.jpg';
+import imgVolleyball from '../media/events/volleyball_new2.png';
+import imgRopeRoyale from '../media/events/rope-royale_new.jpg';
+import imgLongJump from '../media/events/jumps_new.png';
+
+// Event Data
+const EVENTS_DATA = [
+  { id: 1, name: "Football", img: imgFootball },
+  { id: 2, name: "Basketball", img: imgBasketball },
+  { id: 3, name: "Volleyball", img: imgVolleyball },
+  { id: 4, name: "Kabaddi", img: imgKabaddi },
+  { id: 5, name: "Kho-Kho", img: imgKhoKho },
+  { id: 6, name: "Sprint", img: imgSprint },
+  { id: 7, name: "Slow Cycle", img: imgSlowCycle },
+  { id: 8, name: "Throw", img: imgThrow },
+  { id: 9, name: "Badminton", img: imgBadminton },
+  { id: 10, name: "Table Tennis", img: imgTableTennis },
+  { id: 11, name: "Carrom", img: imgCarrom },
+  { id: 12, name: "Chess", img: imgChess },
+  { id: 13, name: "Tug of War", img: imgRopeRoyale },
+  { id: 14, name: "Jumps", img: imgLongJump },
+];
 
 const Register = () => {
+  const sportsTags = EVENTS_DATA.map(e => e.name.toUpperCase());
+  // Duplicate tags to ensure seamless scrolling
+  const displayTags = [...sportsTags, ...sportsTags, ...sportsTags, ...sportsTags];
+
   return (
-    <motion.div className={cx(styles.sponsors, 'page-transition', 'container')}
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      exit={{ scaleX: 0 }}
-    >
-      <header className={cx('page-header', styles['page-header'])}>
-        <h1 className='heading'>
-          <span>Registration</span>
-        </h1>
-      </header>
+    <div className={styles.registerPage}>
+      <motion.div
+        className='container'
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <header className={styles.pageHeader}>
+          <div className={styles['intro-bg']}>
+            <div className={styles.rail}>
+              {displayTags.map((tag, i) => <span key={i}>{tag} &nbsp; </span>)}
+            </div>
+          </div>
+          <h2>Events</h2>
+        </header>
 
-      <main className={styles['main-content']}>
-        <div className={styles.divider}></div>
-        <p className={styles.subtitle}>
-          Get ready to participate in the biggest sports fest of the year.
-        </p>
-
-        <div className={styles['coming-soon']}>
-          <h2 className={styles['big-text']}>Starting Soon...</h2>
-          <p className={styles['info-text']}>
-            We are currently finalizing the events.
-          </p>
+        <div className={styles.eventsGrid}>
+          {EVENTS_DATA.map((event) => (
+            <motion.div
+              key={event.id}
+              className={styles.eventCard}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className={styles.imageWrapper}>
+                <img src={event.img} alt={event.name} className={styles.eventImage} loading="lazy" />
+                <div className={styles.eventOverlay}>
+                  <h3 className={styles.eventName}>{event.name}</h3>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </main>
+      </motion.div>
 
-      <div style={{ position: 'absolute', bottom: '2rem', width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <SupportLink />
-      </div>
-    </motion.div>
+      {/* Footer is already global in Layout, but if we need a specific one or spacing, we handle it via CSS padding */}
+    </div>
   )
 }
 
