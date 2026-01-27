@@ -10,7 +10,7 @@ const CarouselCard = ({ imgSrc, name, roles }) => {
 
       <article className={styles.card}>
         <figure className={styles['card-visual']}>
-          <img src={imgSrc} alt={name} />
+          <img src={imgSrc} alt={name} loading="lazy" decoding="async" />
         </figure>
         <main className={styles['card-content']}>
           <h3 className={styles['card-heading']}>
