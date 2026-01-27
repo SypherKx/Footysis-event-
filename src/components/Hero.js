@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { ReactComponent as ScrollDownIcon } from '../media/icons/down.svg';
-import HeroVideo from '../media/hero-video-2026.mp4';
+import HeroVideo from '../media/new-background-compressed.mp4';
 // import HeroImage from '../media/hero-image.png';
 import FootprintsLogo from '../media/footprints-font.webp';
 import PsitLogo from '../media/psit-logo.png';

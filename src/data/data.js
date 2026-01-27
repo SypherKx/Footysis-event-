@@ -43,7 +43,7 @@ export const mainCoordinators = [
   },
   {
     name: 'Divyansh Vijay',
-    imgSrc: '/media/coordinators/divyansh_vijay.jpg',
+    imgSrc: '/media/coordinators/divyansh_vijay.png',
     roles: ['Website Co Head']
   },
   {
