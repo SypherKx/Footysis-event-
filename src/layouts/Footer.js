@@ -22,7 +22,7 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul>
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/events">Events</NavLink></li>
+              <li><NavLink to="/events">Schedule</NavLink></li>
               <li><NavLink to="/gallery">Gallery</NavLink></li>
               <li><NavLink to="/register">Events</NavLink></li>
 

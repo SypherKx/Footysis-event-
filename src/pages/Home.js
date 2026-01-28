@@ -90,9 +90,9 @@ const Home = ({ user }) => {
             </ul>
           </div>
         </header>
-        <main>
+        {/* <main>
           <Carousel cardsList={mainCoordinators} />
-        </main>
+        </main> */}
       </section>
     </motion.div>
   )
